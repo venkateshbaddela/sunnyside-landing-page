@@ -1,0 +1,566 @@
+/*   .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+
+// CSS properties
+
+//  Primary
+
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark-desaturated-cyan: hsl(167, 40%, 24%);
+$dark-blue: hsl(198, 62%, 26%);
+$dark-moderate-cyan: hsl(168, 34%, 41%);
+//  Neutral
+
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+// Fonts
+$barlow: "Barlow", sans-serif;
+$fraunces: "Fraunces", serif;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+/* Header Styling */
+
+.head {
+  height: 100vh;
+  background-image: url(../images/desktop/image-header.jpg);
+  background-position: center center;
+
+  &-top {
+    padding-top: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+
+    &__logo {
+      margin-left: 5rem;
+      align-self: center;
+      height: 5rem;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__nav {
+      margin-right: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 7rem;
+    }
+
+    &__nav-list {
+      list-style: none;
+      font-size: 2.5rem;
+    }
+
+    &__nav-link {
+      text-decoration: none;
+      font-family: $barlow;
+      color: $white;
+    }
+
+    &__nav-btn {
+      padding: 2rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      background-color: $white;
+      text-transform: uppercase;
+      font-family: $fraunces;
+      font-size: 2rem;
+      font-weight: 900;
+      color: $dark-blue;
+      cursor: pointer;
+      &:hover {
+        color: $white;
+        background-color: hsla(0, 0%, 100%, 0.5);
+      }
+    }
+  }
+
+  &-bot {
+    margin: 20rem auto 0 auto;
+    text-align: center;
+
+    &__heading {
+      margin-bottom: 15rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      font-family: $fraunces;
+      font-size: 7.5rem;
+      color: $white;
+    }
+
+    &__img {
+      justify-self: center;
+      animation: arrowMove 1.5s ease-in-out;
+    }
+  }
+}
+
+///////////////////////////
+/* Section 1 & 2 styling */
+////////////////////////////
+
+.sec {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    transition: all 1.5s;
+  }
+
+  &-content {
+    padding: 0 3rem;
+    max-width: 70rem;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-family: $fraunces;
+
+    &__heading {
+      font-size: 5rem;
+      color: $very-dark-desaturated-blue;
+    }
+
+    &__txt {
+      line-height: 1.5;
+      font-family: $barlow;
+      font-size: 2.5rem;
+      color: $dark-grayish-blue;
+    }
+
+    &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 2.3rem;
+      color: $very-dark-desaturated-blue;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        border-radius: 10px;
+        height: 1rem;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        bottom: 3%;
+      }
+
+      &--yellow::before {
+        background-color: hsl(51, 86%, 77%);
+      }
+      &--yellow:hover::before {
+        background-color: $yellow;
+      }
+
+      &--pink::before {
+        background-color: hsl(7, 85%, 80%);
+      }
+      &--pink:hover::before {
+        background-color: $soft-red;
+      }
+    }
+  }
+}
+
+//////////////////////////////////////
+/* Section 3 styling */
+/////////////////////////////////
+
+.sec-box {
+  position: relative;
+
+  &__con {
+    padding: 0 7rem;
+    position: absolute;
+    bottom: 0;
+    height: 30rem;
+
+    &-heading {
+      margin-bottom: 5rem;
+      text-align: center;
+      font-family: $fraunces;
+      font-size: 5rem;
+
+      &--cyan {
+        color: $dark-desaturated-cyan;
+      }
+
+      &--blue {
+        color: $dark-blue;
+      }
+    }
+
+    &-txt {
+      font-family: $barlow;
+      font-size: 2.5rem;
+      text-align: center;
+      line-height: 1.5;
+
+      &--cyan {
+        color: $dark-desaturated-cyan;
+      }
+
+      &--blue {
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////
+/*Testimonials Section  styling */
+//////////////////////////////////////////
+
+.test {
+  margin: 10rem 0;
+  padding: 0 3.5rem;
+  &-heading {
+    margin: 5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-family: $fraunces;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: $grayish-blue;
+    text-align: center;
+  }
+
+  &-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  &-con {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    text-align: center;
+
+    &__img {
+      width: 15rem;
+      border-radius: 100px;
+      align-self: center;
+      filter: blur(2.5px);
+      transition: all 1s;
+    }
+
+    &__txt {
+      padding-bottom: 3.5rem;
+      font-family: $barlow;
+      font-size: 2.5rem;
+      color: $very-dark-grayish-blue;
+      line-height: 1.5;
+    }
+
+    &__detail {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-family: $barlow;
+      font-size: 2.3rem;
+
+      &-name {
+        font-family: $fraunces;
+        font-weight: 900;
+      }
+
+      &-job {
+        font-size: 1.7rem;
+        color: $grayish-blue;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////
+/* Image gallery section styling */
+////////////////////////////////////////////////////
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+}
+
+////////////////////////////////////////////////////
+/* Footer styling */
+///////////////////////////////////////////////////
+
+.foot {
+  padding: 7rem 0;
+  background-color: $dark-moderate-cyan;
+  filter: brightness(1.5);
+  display: grid;
+  justify-items: center;
+
+  &-logo {
+    margin-bottom: 5rem;
+    height: 5rem;
+    filter: brightness(0.1);
+  }
+
+  &-nav__list {
+    margin-bottom: 10rem;
+    display: flex;
+    gap: 7rem;
+
+    &-item {
+      list-style: none;
+      font-family: $barlow;
+      font-size: 2.5rem;
+      color: $dark-desaturated-cyan;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &-soc__list {
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 7rem;
+
+    &-img {
+      width: 3.5rem;
+      height: 3.5rem;
+      filter: brightness(0.7);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    &-img:hover {
+      filter: brightness(5);
+    }
+
+    &-item {
+      list-style: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  /* header */
+
+  .head {
+    &-top {
+      position: relative;
+
+      &__logo {
+        justify-self: start;
+      }
+
+      &__btn {
+        justify-self: end;
+        margin-right: 10rem;
+        width: 0;
+        display: block;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      &__nav {
+        position: absolute;
+        margin-right: 0;
+        padding: 5rem 0;
+        width: 50rem;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        background-color: $white;
+        border-radius: 1rem 0 1rem 1rem;
+        flex-direction: column;
+        gap: 5.5rem;
+        top: 25rem;
+        right: 7rem;
+        opacity: 1;
+      }
+
+      &__nav-list {
+        list-style: none;
+        font-size: 2.5rem;
+      }
+
+      &__nav-link {
+        color: $grayish-blue;
+      }
+
+      &__nav-btn {
+        color: $dark-blue;
+        background-color: $yellow;
+        cursor: pointer;
+        &:hover {
+          color: $white;
+          background-color: rgba($yellow, 0.5);
+        }
+      }
+    }
+  }
+
+  /* Parent div for navigation list styling */
+  .head-top__nav-box {
+    &::before {
+      content: "";
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      height: 10rem;
+      width: 7rem;
+      background-color: $white;
+      position: absolute;
+      transform: translateY(25rem);
+      right: 7rem;
+      top: -9rem;
+    }
+  }
+
+  /* sec 1 & 2 */
+  .sec {
+    grid-template-columns: 1fr;
+    &:nth-child(1) .sec-img {
+      grid-row: 1/2;
+    }
+
+    &-content {
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+  }
+
+  /* gallary */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /* testimonial */
+  .test-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .test-con {
+    gap: 3rem;
+
+    &__txt {
+      padding-bottom: 0;
+    }
+  }
+
+  /* Javascript triggered classs fordisplaying and hiding navigation list */
+  .hidden {
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
+@media only screen and(max-width:600px) {
+  /* header */
+  .head {
+    background-image: url(../images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-top__nav {
+      width: 40rem;
+    }
+  }
+
+  .sec-box__con {
+    padding: 0 2.5rem;
+  }
+}
+
+@media only screen and(max-width:450px) {
+  html {
+    font-size: 40%;
+  }
+
+  .head-bot__heading {
+    margin: 30rem 2.5rem 20rem 2.5rem;
+    font-size: 6rem;
+  }
+}
+
+/* Javascript trigger classes */
+
+.preload * {
+  transition: none !important;
+}
+
+/* Header down arrow animation */
+@keyframes arrowMove {
+  0% {
+    transform: translateY(7rem);
+  }
+
+  50% {
+    transform: translateY(3rem);
+  }
+
+  100% {
+    transform: translateY(7rem);
+  }
+}
+
+/* Javascript triggered class for transforming images in section 1, 2 & 3 */
+.images-scale {
+  transform: scale(0.9);
+}

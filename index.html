@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <body class="preload">
+    <!-- Header -->
+    <header class="head">
+      <div class="head-top">
+        <img src="images/logo.svg" alt="company logo" class="head-top__logo" />
+        <button class="head-top__btn">
+          <img
+            src="images/icon-hamburger.svg"
+            alt="hamburger image"
+            class="head-top__btn-img"
+          />
+        </button>
+        <div class="head-top__nav-box">
+          <ul class="head-top__nav">
+            <li class="head-top__nav-list">
+              <a href="" class="head-top__nav-link">About</a>
+            </li>
+            <li class="head-top__nav-list">
+              <a href="" class="head-top__nav-link">Services</a>
+            </li>
+            <li class="head-top__nav-list">
+              <a href="" class="head-top__nav-link">Project</a>
+            </li>
+            <li class="head-top__nav-list">
+              <button class="head-top__nav-btn">Contact</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="head-bot">
+        <h1 class="head-bot__heading">We are creatives</h1>
+        <img
+          src="images/icon-arrow-down.svg"
+          alt="down arrow"
+          class="head-bot__img"
+        />
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="main">
+      <!-- section--1 -->
+      <section class="sec sec--one">
+        <div class="sec-content">
+          <h2 class="sec-content__heading">Transform your brand</h2>
+          <p class="sec-content__txt">
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <div class="">
+            <a href="#" class="sec-content__link sec-content__link--yellow"
+              >Learn more</a
+            >
+          </div>
+        </div>
+
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="images/mobile/image-transform.jpg"
+          />
+
+          <img
+            src="images/desktop/image-transform.jpg"
+            alt="egg image"
+            class="sec-img"
+          />
+        </picture>
+      </section>
+
+      <!-- section--2 -->
+      <section class="sec sec--two">
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="images/mobile/image-stand-out.jpg"
+          />
+
+          <img
+            src="images/desktop/image-stand-out.jpg"
+            alt="glass image"
+            class="sec-img"
+          />
+        </picture>
+
+        <div class="sec-content">
+          <h2 class="sec-content__heading">Stand out to the right audience</h2>
+          <p class="sec-content__txt">
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <div>
+            <a href="#" class="sec-content__link sec-content__link--pink"
+              >Learn more</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- section--3 -->
+      <section class="sec sec-three">
+        <div class="sec-box sec-box__lft">
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              srcset="images/mobile/image-graphic-design.jpg"
+            />
+            <img
+              src="images/desktop/image-graphic-design.jpg"
+              alt="cherry image"
+              class="sec-box__img sec-img"
+            />
+          </picture>
+
+          <div class="sec-box__con">
+            <h3 class="sec-box__con-heading sec-box__con-heading--cyan">
+              Graphic design
+            </h3>
+            <p class="sec-box__con-txt sec-box__con-txt">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </div>
+
+        <div class="sec-box sec-box__rgt">
+          <picture>
+            <source
+              media="(max-width: 600px)"
+              srcset="images/mobile/image-photography.jpg"
+            />
+            <img
+              src="images/desktop/image-photography.jpg"
+              alt="orange image"
+              class="sec-box__img sec-img"
+            />
+          </picture>
+
+          <div class="sec-box__con">
+            <h3 class="sec-box__con-heading sec-box__con-heading--blue">
+              Photography
+            </h3>
+            <p class="sec-box__con-txt sec-box__con-txt--blue">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- section--4 -->
+      <section class="test">
+        <h2 class="test-heading">Client testimonials</h2>
+
+        <div class="test-grid">
+          <div class="test-con">
+            <img
+              src="images/image-emily.jpg"
+              alt="person image"
+              class="test-con__img"
+            />
+            <p class="test-con__txt">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+
+            <div class="test-con__detail">
+              <span class="test-con__detail-name">Emily R.</span>
+              <span class="test-con__detail-job">Marketing Director</span>
+            </div>
+          </div>
+
+          <div class="test-con">
+            <img
+              src="images/image-thomas.jpg"
+              alt="person image"
+              class="test-con__img"
+            />
+            <p class="test-con__txt">
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+
+            <div class="test-con__detail">
+              <span class="test-con__detail-name">Thomas S.</span>
+              <span class="test-con__detail-job">Chief Operating Officer</span>
+            </div>
+          </div>
+
+          <div class="test-con">
+            <img
+              src="images/image-jennie.jpg"
+              alt="person image"
+              class="test-con__img"
+            />
+            <p class="test-con__txt">
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+
+            <div class="test-con__detail">
+              <span class="test-con__detail-name">Jennie F.</span>
+              <span class="test-con__detail-job">Business Owner</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section--5 -->
+      <section class="gallery">
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="images/mobile/image-gallery-milkbottles.jpg"
+          />
+
+          <img
+            src="images/desktop/image-gallery-milkbottles.jpg"
+            alt="milkbottles image"
+            class="gallery-img"
+          />
+        </picture>
+
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="images/mobile/image-gallery-orange.jpg"
+          />
+
+          <img
+            src="images/desktop/image-gallery-orange.jpg"
+            alt="orange image"
+            class="gallery-img"
+          />
+        </picture>
+
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="images/mobile/image-gallery-cone.jpg"
+          />
+
+          <img
+            src="images/desktop/image-gallery-cone.jpg"
+            alt="cone image"
+            class="gallery-img"
+          />
+        </picture>
+
+        <picture>
+          <source
+            media="(max-width: 600px)"
+            srcset="images/mobile/image-gallery-sugar-cubes.jpg"
+          />
+
+          <img
+            src="images/desktop/image-gallery-sugarcubes.jpg"
+            alt="sugarcubes image"
+            class="gallery-img"
+          />
+        </picture>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="foot">
+      <img src="images/logo.svg" alt="logo" class="foot-logo" />
+
+      <ul class="foot-nav__list">
+        <li class="foot-nav__list-item">About</li>
+        <li class="foot-nav__list-item">Services</li>
+        <li class="foot-nav__list-item">Projects</li>
+      </ul>
+
+      <ul class="foot-soc__list">
+        <li class="foot-soc__list-item">
+          <img
+            src="images/icon-facebook.svg"
+            alt="pinterest logo"
+            class="foot-soc__list-img"
+          />
+        </li>
+        <li class="foot-soc__list-item">
+          <img
+            src="images/icon-instagram.svg"
+            alt="pinterest logo"
+            class="foot-soc__list-img"
+          />
+        </li>
+        <li class="foot-soc__list-item">
+          <img
+            src="images/icon-twitter.svg"
+            alt="pinterest logo"
+            class="foot-soc__list-img"
+          />
+        </li>
+        <li class="foot-soc__list-item">
+          <img
+            src="images/icon-pinterest.svg"
+            alt="pinterest logo"
+            class="foot-soc__list-img"
+          />
+        </li>
+      </ul>
+    </footer>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
